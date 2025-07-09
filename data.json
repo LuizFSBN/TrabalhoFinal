@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "email": "luiz@unifesspa.edu.br",
+      "password": "senha123",
+      "bookings": [],
+      "selectedEmbarkationPoint": null
+    },
+    {
+      "email": "mario@unifesspa.edu.br",
+      "password": "outrasenha",
+      "bookings": [],
+      "selectedEmbarkationPoint": null
+    }
+  ],
+  "busSchedule": [
+    {
+      "id": "bus001",
+      "route": "Campus I",
+      "times": ["07:00", "08:15", "12:00", "13:30", "18:00", "19:30"],
+      "days": ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira"]
+    },
+    {
+      "id": "bus002",
+      "route": "Campus II",
+      "times": ["07:30", "09:00", "12:30", "14:00", "18:30"],
+      "days": ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira"]
+    },
+    {
+      "id": "bus003",
+      "route": "Campus III",
+      "times": ["08:00", "11:00", "15:00", "17:00"],
+      "days": ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira"]
+    }
+  ],
+  "feedbacks": [],
+  "embarkationPointsByNucleus": [
+    {
+      "id": "cn",
+      "name": "Cidade Nova",
+      "pointName": "Praça São Francisco",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.585590924962!2d-49.1235312!3d-5.352495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92c9b68c4a169b83%3A0xb3e1c9e2b17f8a84!2sNucleo%20Cidade%20Nova%2C%20Marab%C3%A1%20-%20PA%2C%2068500-000!5e0!3m2!1spt-BR!2sbr!4v1701234567890!5m2!1spt-BR!2sbr"
+    },
+    {
+      "id": "nm",
+      "name": "Nova Marabá",
+      "pointName": "Terminal Nova Marabá",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.935100650993!2d-49.1278144!3d-5.3135398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92c9b60ee45f17d3%3A0xc4f9b8c0a875a6c!2sNova%20Marab%C3%A1%2C%20Marab%C3%A1%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1701234567891!5m2!1spt-BR!2sbr"
+    },
+    {
+      "id": "lb",
+      "name": "Liberdade",
+      "pointName": "Ponto da Praça da Liberdade",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.693895996954!2d-49.1415255!3d-5.3370966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92c9b6572e9a224f%3A0x6b45a9a4e2b0c2e!2sLiberdade%2C%20Marab%C3%A1%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1701234567892!5m2!1spt-BR!2sbr"
+    },
+    {
+      "id": "vm",
+      "name": "Velha Marabá",
+      "pointName": "Orla de Velha Marabá",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.822851172605!2d-49.125139!3d-5.3278502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92c9b5898d94e339%3A0x7d6f5f3e9b10a9a1!2sOrla%20de%20Marab%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1701234567893!5m2!1spt-BR!2sbr"
+    }
+  ]
+}

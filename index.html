@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Aluno - UNIFESSPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="imagens/SIGEventos_app_eventos.ear_eventos.war_img_imagens_variaveis_logoTipoInstituicao.png" alt="Logo da UNIFESSPA" class="logo">
+            <h1>Portal de Ônibus</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="login-section" class="container">
+            <h2>Alunos Unifesspa</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">E-mail Institucional:</label>
+                    <input type="email" id="email" placeholder="seu.email@unifesspa.edu.br" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Entrar</button>
+                <p id="login-message" class="message"></p>
+            </form>
+        </section>
+
+        <section id="dashboard-section" class="container hidden">
+            <h2>Bem-vindo(a), <span id="student-email-display"></span>!</h2>
+
+            <div class="dashboard-layout">
+                <aside class="sidebar">
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="nav-link active" data-target="bus-map-content">Horários e Agendamentos</a></li>
+                            <li><a href="#" class="nav-link" data-target="feedback-content">Feedback e Sugestões</a></li>
+                            <li><a href="#" class="nav-link" data-target="profile-content">Meu Perfil</a></li>
+                        </ul>
+                    </nav>
+                    <button id="logout-button">Sair</button>
+                </aside>
+
+                <div class="main-content-area">
+
+                    <div id="bus-map-content" class="content-section">
+                        <div class="dashboard-grid">
+                            <div class="card">
+                                <h3>Horários de Ônibus</h3>
+                                <img src="imagens/onibus(sem marca).png" alt="Ônibus" class="card-image">
+                                <div id="bus-schedule">
+                                    <p>Carregando horários...</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <h3>Meus Agendamentos de Ônibus</h3>
+                                <img src="imagens/agenda.png" alt="Agenda" class="card-image">
+                                <div id="my-bus-bookings">
+                                    <p>Nenhum agendamento ainda.</p>
+                                    <ul></ul>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+
+                    <div id="feedback-content" class="content-section hidden">
+                        <div class="card">
+                            <h3>Feedback e Sugestões</h3>
+                            <img src="imagens/feedback.png" alt="Feedback" class="card-image">
+                            <form id="feedback-form">
+                                <div class="form-group">
+                                    <label for="feedback-type">Tipo de Feedback:</label>
+                                    <select id="feedback-type">
+                                        <option value="onibus">Ônibus</option>
+                                        <option value="estrutura">Estrutura</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedback-message">Sua Mensagem:</label>
+                                    <textarea id="feedback-message" rows="5" placeholder="Digite seu feedback aqui..." required></textarea>
+                                </div>
+                                <button type="submit">Enviar Feedback</button>
+                                <p id="feedback-message-display" class="message"></p>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="profile-content" class="content-section hidden">
+                        <div class="card">
+                            <h3>Meu Perfil</h3>
+                            <p><strong>E-mail:</strong> <span id="profile-email"></span></p>
+                            <p>Aqui você poderá ver e gerenciar suas informações de perfil.</p>
+                            <p>(Funcionalidades futuras como edição de perfil, foto, etc., seriam adicionadas aqui.)</p>
+                        </div>
+                    </div>
+
+                </div></div></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 UNIFESSPA. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="booking-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Confirmar Agendamento de Ônibus</h3>
+            <p><strong>Rota:</strong> <span id="modal-bus-route"></span></p>
+            <p><strong>Horário:</strong> <span id="modal-bus-time"></span></p>
+
+            <div class="form-group">
+                <label for="modal-nucleus-select">Selecione seu Núcleo de Embarque:</label>
+                <select id="modal-nucleus-select" class="form-control">
+                    </select>
+            </div>
+
+            <div class="map-container">
+                <iframe id="modal-map-iframe"
+                        width="100%"
+                        height="250"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="map-iframe">
+                </iframe>
+                <p id="modal-embark-point-display" class="message info"></p>
+            </div>
+
+            <div class="modal-buttons">
+                <button id="confirm-booking-btn" class="success-btn">Confirmar Agendamento</button>
+                <button id="cancel-booking-btn" class="cancel-btn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
